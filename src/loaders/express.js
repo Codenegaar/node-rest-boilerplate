@@ -32,17 +32,17 @@ module.exports = async ({ logger, handlers }) => {
 
     //Connect API
     expressApp.use(
-        process.env.IMG_API_PREFIX,
+        process.env.BP_PREFIX,
         api({ handlers })
     );
 
     //Start listening
-    expressApp.listen(process.env.IMG_API_PORT, err => {
+    expressApp.listen(process.env.BP_PORT, err => {
         if (err) {
             logger.error(`Error starting the server: ${err}`);
             process.exit(1);
         } else {
-            logger.verbose(`Server started listening on ${process.env.IMG_API_PORT}`);
+            logger.verbose(`Server started listening on ${process.env.BP_PORT}, prefix: ${process.env.BP_PREFIX}`);
         }
     });
 

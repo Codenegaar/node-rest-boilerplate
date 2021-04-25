@@ -1,7 +1,7 @@
 {
   "name": "image-api",
   "version": "1.0.0",
-  "description": "An API to process images",
+  "description": "A simple Node RESTful API boilerplate",
   "main": "src/app.js",
   "scripts": {
     "test": "mocha",

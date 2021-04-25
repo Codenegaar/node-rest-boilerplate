@@ -8,7 +8,7 @@
     "start": "node src/app.js"
   },
   "author": "Ali Rashidi (alirashidi127@gmail.com)",
-  "license": "MIT",
+  "license": "Unlicense",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",

@@ -1,0 +1,23 @@
+{
+  "name": "image-api",
+  "version": "1.0.0",
+  "description": "An API to process images",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node src/app.js"
+  },
+  "author": "Ali Rashidi (alirashidi127@gmail.com)",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2"
+  }
+}

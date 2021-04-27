@@ -1,0 +1,11 @@
+//This file overrides the default location for models, seeders, and migrations
+//Also the default configuration file's extension and path is changed.
+
+const path = require("path");
+
+module.exports = {
+    "config": path.resolve("src/config", "sequelize.js"),
+    "models-path": path.resolve("src", "models"),
+    "seeders-path": path.resolve("src", "seeders"),
+    "migrations-path": path.resolve("src", "migrations"),
+};

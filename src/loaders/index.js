@@ -2,6 +2,7 @@ const loggerLoader =    require("./logger");
 const expressLoader =   require("./express");
 const serviceLoader =   require("./services");
 const handlerLoader =   require("./handlers");
+const rabbitmqLoader =  require("./rabbitmq");
 
 module.exports = async () => {
     //Load logger first
@@ -13,4 +14,5 @@ module.exports = async () => {
     let handlers = await handlerLoader({ services });
 
     let expressApp = await expressLoader({ logger, handlers });
+    await rabbitmqLoader({ services, logger });
 };

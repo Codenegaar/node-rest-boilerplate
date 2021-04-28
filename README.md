@@ -18,9 +18,26 @@ the `pm2` package:
 
 `npm uninstall pm2`
 
+### .env file
+
+Configuration is done using the `.env` file. As a best practice, you should avoid including 
+the `.env` file in the git repository (which I've done as well). So I made a `.env.sample` 
+file to give you an overview of what environment variables can be set.
+
+To process and set the environemnt variables, we use the generally accepted `dotenv` package.
+
 ### Sequelize + Postgres
 
-### .env file
+I have used Sequelize as the ORM tool for this boilerplate. After installing it
+globally, I intialized sequelize using `sequelize init` but changed the default 
+setup a bit.
+
+* I have moved the `models`, `migrations`, and `seeders` directories into the `src` directory.
+
+* I have moved the `config` directory inside `src`, renamed the default configuration file
+to `sequelize.js` and made some changes. Check the comments!
+
+* I have created the `.sequelizerc` file which handles the changes in the default setup
 
 ### Docker
 

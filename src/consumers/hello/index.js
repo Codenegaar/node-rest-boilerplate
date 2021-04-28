@@ -1,5 +1,6 @@
 module.exports = ({ helloChannel, services, logger }) => {
     helloChannel.consume(process.env.BP_HELLO_QUEUE, message => {
-        logger.info(`Message recieved: ${message.content.toString()}`);
+        let greeting = services.helloService.sayHello(message.content.toString());
+        logger.info(greeting);
     }, { noAck: true });
 }
